@@ -1,0 +1,97 @@
+
+/*body関連*/
+body{
+    background-color: lightgoldenrodyellow;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width:990px;
+    height:100%;
+    background-color: lightskyblue;
+}
+
+.contents{
+    display: flex;
+    background-color: lightgoldenrodyellow;
+}
+
+.contents_left{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    width: 100px;
+    background-color: lightskyblue;
+}
+
+.venue_information{
+    text-align: center;
+    font-size: 15px;
+}
+
+.venue_list{
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.contents_right_before {
+    width: 895px;
+    background-color: #ffa100;
+}
+
+.venue_select{
+    width: 100px;
+    margin-left: 397px;
+    background-color: #ECEFF1;
+    text-align: center;
+}
+
+.venue_select_list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /*折り返し*/
+}
+
+.open_venue{
+    margin: 10px;
+    width: 180px;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+.rest_venue{
+    margin: 10px;
+    width: 180px;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    background-color: darkgrey;
+}
+
+.contents_right_after{
+    width: 895px;
+    background-color: mediumturquoise;
+}
+
+.footer{
+    text-align: center;
+    clear: both;
+    width:990px;
+    height: 100px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: lightskyblue;
+}
+
+/*body関連*/

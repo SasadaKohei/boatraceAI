@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" content="no-cache">
+    <title>Welcome to Firebase Hosting</title>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./CSS/main.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.2.1/firebase-app.js"></script>
+    <script src="/__/firebase/7.2.1/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+  </head>
+  <body>
+  <div class="wrapper">
+    <header class="header">Boatrace AI</header>
+
+    <div class="contents">
+      <div  class="contents_left">
+        <p class="venue_information">会場リンク</p>
+        <ul id="venueList" class="venue_list">
+          <script>
+            createContentsMenu();
+          </script>
+        </ul>
+      </div>
+      <div id="contentsRight" class="contents_right_before">
+        <p id="venueSelect" class="venue_select">会場選択</p>
+        <div id="venueSelectList" class="venue_select_list">
+          <script>
+            createVenueSelectList();
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">Boatrace AI</footer>
+  </div>
+  </body>
+
+</html>
