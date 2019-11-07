@@ -48,8 +48,9 @@ body{
 }
 
 .venue_select{
-    width: 100px;
-    margin-left: 397px;
+    width: 150px;
+    margin-left: 367px;
+    font-size: 30px;
     background-color: #ECEFF1;
     text-align: center;
 }
@@ -81,6 +82,14 @@ body{
 .contents_right_after{
     width: 895px;
     background-color: mediumturquoise;
+}
+
+.clicked_venue{
+    width: 100px;
+    margin-top: 10px;
+    font-size: 30px;
+    background-color: #ECEFF1;
+    text-align: center;
 }
 
 .footer{
