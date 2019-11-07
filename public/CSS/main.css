@@ -92,6 +92,15 @@ body{
     text-align: center;
 }
 
+.undo_layout_button{
+    width: 100px;
+    margin-top: 60%;
+    margin-left: 45%;
+    font-size: 15px;
+    text-align: center;
+    background-color: #ffa100;
+}
+
 .footer{
     text-align: center;
     clear: both;

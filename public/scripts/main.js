@@ -35,7 +35,7 @@ function createVenueSelectList() {
         let cvs = document.createElement('button');
         let text = document.createTextNode(venue[count]);
         cvs.appendChild(text);
-        cvs.setAttribute('id', 'venue_button_' + count);
+        cvs.setAttribute('id', 'venueButton' + count);
         //後にスクレイピング競技開催中の会場フラグを追加
         if (String(venue[count]) === '鳴門') {
             cvs.setAttribute('class', 'open_venue');
@@ -90,31 +90,25 @@ function changeRightVenueLayout(clicked_id) {
     for (let i = 0; i < len_remove_open; i++) {
         remove_rest_venue[0].remove();
     }
-
     remove_select_venue.remove();
+    createUndoButton();
 }
 
-// /**
-//  * checkOpenVenue()
-//  * role : 競技中の会場かチェック
-//  */
-//
-// function checkOpenVenue(){
-//     if (this.className === 'open_venue') onClickVenueButton();
-// }
-//
-// /**
-//  * addClickEvent()
-//  * role : クリックイベントを付け足す関数
-//  * @param count: 会場リストのindex番号
-//  */
-// function addClickEvent(count) {
-//     document.getElementById("venue_button_" + count).addEventListener('click', onClickVenueButton, false);
-// }
+/**
+ * createUndoButton()
+ * role :会場選択画面に戻るボタンを作成
+ */
+function createUndoButton() {
+    let div = document.getElementById('contentsRight');
 
+    let cvs = document.createElement('button');
+    let text = document.createTextNode('会場選択へ');
+    cvs.appendChild(text);
+    cvs.setAttribute('id', 'undoButton');
+    cvs.setAttribute('class', 'undo_layout_button');
 
-
-
+    div.appendChild(cvs);
+}
 
 
 
