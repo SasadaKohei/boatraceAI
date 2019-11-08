@@ -14,7 +14,7 @@ const venue = ['桐生', '戸田', '江戸川', '平和島', '多摩川', '浜�
  *
  * */
 function createContentsMenu() {
-    let ul = document.getElementById('venueList');
+    let ul = document.getElementById('VenueList');
     for (let count = 0; count < venue.length; count++) {
         let li = document.createElement('li');
         let text = document.createTextNode(venue[count]);
@@ -29,7 +29,7 @@ function createContentsMenu() {
  *
  * */
 function createVenueSelectList() {
-    let div = document.getElementById("venueSelectList");
+    let div = document.getElementById("VenueSelectList");
 
     for (let count = 0; count < venue.length; count++) {
         let cvs = document.createElement('button');
@@ -39,7 +39,7 @@ function createVenueSelectList() {
         //後にスクレイピング競技開催中の会場フラグを追加
         if (String(venue[count]) === '鳴門') {
             cvs.setAttribute('class', 'open_venue');
-            cvs.addEventListener('click', onClickVenueButton);
+            // cvs.addEventListener('click', onClickVenueButton);
         } else {
             cvs.setAttribute('class', 'rest_venue');
         }
