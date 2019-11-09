@@ -14,12 +14,13 @@ const venue = ['桐生', '戸田', '江戸川', '平和島', '多摩川', '浜�
  *
  * */
 function createContentsMenu() {
-    let ul = document.getElementById('VenueList');
+    let div = document.getElementById('ContentsLeft');
     for (let count = 0; count < venue.length; count++) {
-        let li = document.createElement('li');
+        let p = document.createElement('p');
         let text = document.createTextNode(venue[count]);
-        li.appendChild(text);
-        ul.appendChild(li);
+        p.appendChild(text);
+        p.setAttribute('class', 'venue_info');
+        div.appendChild(p);
     }
 }
 

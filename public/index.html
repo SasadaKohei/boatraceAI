@@ -14,20 +14,37 @@
   </head>
   <body>
     <div class="wrapper"> 
-      <div id="Header">ヘッダー</div>  
+      <header id="Header">DEV monitor</header>  
+
       <div id="Contents" class="contents">
-        <div id="ContentsLeft" class="contents_left">
-          <ul id="VenueList">
+        <div id=ContentsLeft class='flex-contents contents_left'>
+          <p class="all_venue"> 会場一覧</p>
+          <script>createContentsMenu();</script>
+        </div>
+        <div class="flex-contents contents-right">
+          <p>子要素1</p>
+          <p>子要素2</p>
+          <p>子要素3</p>
+          <p>子要素4</p>
+          <p>子要素5</p>
+        </div>
+      </div>
+
+        
+        <!-- <div id="ContentsRight" class="contents_right">
+            コンテンツ右
+        </div> -->
+
+        
+        <!-- <div id="ContentsLeft" class="contents_left">
+          <ul id="VenueList" class="venue_list">
               <script>
                   createContentsMenu();
               </script>
           </ul>
-        </div>
-        <div id="ContentsRight" class="contents_right">
-          コンテンツ右
-        </div>
-      </div>
-      <div id="Footer">フッター</div>
+        </div> -->
+
+      <footer id="Footer">DEV monitor</footer>
     </div>
   </body>
 
