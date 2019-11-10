@@ -13,30 +13,28 @@
 
   </head>
   <body>
-  <div class="wrapper">
-    <header class="header">Boatrace AI</header>
+    <div class="wrapper"> 
+      <header id="Header">DEV monitor</header>  
 
-    <div class="contents">
-      <div  class="contents_left">
-        <p class="venue_information">会場リンク</p>
-        <ul id="venueList" class="venue_list">
-          <script>
-            createContentsMenu();
-          </script>
-        </ul>
-      </div>
-      <div id="contentsRight" class="contents_right_before">
-        <p id="venueSelect" class="venue_select">会場選択</p>
-        <div id="venueSelectList" class="venue_select_list">
-          <script>
-            createVenueSelectList();
-          </script>
+      <div id="Contents" class="contents">
+        <div id=ContentsLeft class='flex-contents contents_left'>
+          <p class="all_venue"> 会場一覧</p>
+          <script>createContentsMenu();</script>
+        </div>
+        <div id="ContentsRight" class="contents-right">
+          <div class="flex-right-contents right-header">
+              <p>会場選択</p>
+          </div>
+          <div id="RightContentsContents" class="flex-right-contents right-select">
+            <script>
+              createVenueSelectList();
+            </script>
+          </div>
+          <div class="flex-right-contents right-result">main predict contents</div>     
         </div>
       </div>
+      <footer id="Footer">DEV monitor</footer>
     </div>
-
-    <footer class="footer">Boatrace AI</footer>
-  </div>
   </body>
 
 </html>
