@@ -30,21 +30,21 @@ function createContentsMenu() {
  *
  * */
 function createVenueSelectList() {
-    let div = document.getElementById("VenueSelectList");
+    let div = document.getElementById("RightContentsContents");
 
     for (let count = 0; count < venue.length; count++) {
-        let cvs = document.createElement('button');
+        let button = document.createElement('button');
         let text = document.createTextNode(venue[count]);
-        cvs.appendChild(text);
-        cvs.setAttribute('id', 'venueButton' + count);
+        button.appendChild(text);
+        button.setAttribute('id', 'venueButton' + count);
         //後にスクレイピング競技開催中の会場フラグを追加
         if (String(venue[count]) === '鳴門') {
-            cvs.setAttribute('class', 'open_venue');
+            button.setAttribute('class', 'flex-contents open_venue');
             // cvs.addEventListener('click', onClickVenueButton);
         } else {
-            cvs.setAttribute('class', 'rest_venue');
+            button.setAttribute('class', 'flex-contents rest_venue');
         }
-        div.appendChild(cvs);
+        div.appendChild(button);
     }
 }
 

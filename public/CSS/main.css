@@ -1,5 +1,5 @@
 div{
-    border: solid 8px red;
+    border: solid 5px red;
     box-sizing: border-box;
     text-align: center;
     font-weight: bold;
@@ -23,7 +23,7 @@ header{
 
 /* contents 左側のレイアウト設定 */
 .contents-left{
-    flex-basis: 15%;
+    flex-basis: 20%;
 }
 
 .all_venue{
@@ -44,8 +44,27 @@ header{
 .contents-right{
     flex-basis: 90%;
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
 }
 
+.right-header{
+    flex-basis: 5%;
+    font-size: 20px;
+}
+
+.right-select{
+    flex-basis: 10%;
+    display: flex;
+    font-size: 20px;
+}
+
+.right-result{
+    flex-basis: 85%;
+    font-size: 100px;
+}
+
+/* footer レイアウト設定 */
   footer{
       line-height: 100px;
       width: 100%;
