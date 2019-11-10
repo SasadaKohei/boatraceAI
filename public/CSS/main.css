@@ -59,6 +59,18 @@ header{
     font-size: 20px;
 }
 
+.rest_venue{
+    background-color: gray;
+}
+
+.open_venue{
+    background-color: lavenderblush;
+}
+
+.clicked_venue{
+    background-color: lightsalmon;
+}
+
 .right-result{
     flex-basis: 85%;
     font-size: 100px;

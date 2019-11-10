@@ -40,7 +40,10 @@ function createVenueSelectList() {
         //後にスクレイピング競技開催中の会場フラグを追加
         if (String(venue[count]) === '鳴門') {
             button.setAttribute('class', 'flex-contents open_venue');
-            // cvs.addEventListener('click', onClickVenueButton);
+            button.addEventListener('click', onClickVenueButton);
+        }else if (String(venue[count]) === '住之江'){
+            button.setAttribute('class', 'flex-contents open_venue');
+            button.addEventListener('click', onClickVenueButton);
         } else {
             button.setAttribute('class', 'flex-contents rest_venue');
         }
@@ -53,62 +56,23 @@ function createVenueSelectList() {
  * role :開催中の会場をクリックした時の処理
  */
 function onClickVenueButton() {
-    changeRightLayout();
-    changeRightVenueLayout(this.id);
+    changeRightLayout(this.id);
+    // changeRightVenueLayout(this.id);
 }
 
 /**
- * changeRightLayout()
- * role :開催中の会場をクリックした時の右レイアウトの背景変更処理
+ * changeRightLayout();
+ * @param :cliced_id 押したボタンのid
  */
-function changeRightLayout() {
-    let right_layout = document.getElementById('contentsRight');
-    right_layout.className = 'contents_right_after';
-}
-
-/**
- * changeRightLayout()
- * role :開催中の会場をクリックした時の選択可能会場レイアウト変更処理
- * @param clicked_id :押した会場ボタンのid
- */
-
-function changeRightVenueLayout(clicked_id) {
+function changeRightLayout(clicked_id){
+    for (let count = 0; count < venue.length; count++) {
+        let div = document.getElementById('venueButton' + count);
+        if (div.className === 'flex-contents clicked_venue'){
+            div.className = 'flex-contents open_venue'
+        }
+    }
     let clicked_venue = document.getElementById(clicked_id);
-    clicked_venue.className = 'clicked_venue';
-
-    let remove_open_venue = document.getElementsByClassName('open_venue');
-    let remove_rest_venue = document.getElementsByClassName('rest_venue');
-    let remove_select_venue = document.getElementById("venueSelect");
-
-    let len_remove_open = remove_rest_venue.length;
-    let len_remove_rest = remove_open_venue.length;
-
-    // remove_rest_len配列の先頭を消していく
-    for (let i = 0; i < len_remove_rest; i++) {
-        remove_rest_venue[0].remove();
-    }
-
-    for (let i = 0; i < len_remove_open; i++) {
-        remove_rest_venue[0].remove();
-    }
-    remove_select_venue.remove();
-    createUndoButton();
-}
-
-/**
- * createUndoButton()
- * role :会場選択画面に戻るボタンを作成
- */
-function createUndoButton() {
-    let div = document.getElementById('contentsRight');
-
-    let cvs = document.createElement('button');
-    let text = document.createTextNode('会場選択へ');
-    cvs.appendChild(text);
-    cvs.setAttribute('id', 'undoButton');
-    cvs.setAttribute('class', 'undo_layout_button');
-
-    div.appendChild(cvs);
+    clicked_venue.className = 'flex-contents clicked_venue';
 }
 
 
