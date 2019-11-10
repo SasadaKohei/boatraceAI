@@ -57,7 +57,6 @@ function createVenueSelectList() {
  */
 function onClickVenueButton() {
     changeRightLayout(this.id);
-    // changeRightVenueLayout(this.id);
 }
 
 /**
