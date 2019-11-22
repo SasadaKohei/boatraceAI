@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" content="no-cache">
+    <title>DEV monitor</title>
+    <script src="../static/scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+
+  </head>
+  <body>
+    <div class="wrapper"> 
+      <header id="Header">DEV monitor</header>  
+
+      <div id="Contents" class="contents">
+        <div id=ContentsLeft class='flex-contents contents_left'>
+          <p class="all_venue"> 会場一覧</p>
+          <script>createContentsMenu();</script>
+        </div>
+        <div id="ContentsRight" class="contents-right">
+          <div class="flex-right-contents right-header">
+              <p>会場選択</p>
+          </div>
+          <div id="RightContentsContents" class="flex-right-contents right-select">
+            <script>
+              createVenueSelectList();
+            </script>
+          </div>
+          <div class="flex-right-contents right-result">main predict contents</div>     
+        </div>
+      </div>
+      <footer id="Footer">DEV monitor</footer>
+    </div>
+  </body>
+
+</html>

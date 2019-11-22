@@ -1,0 +1,83 @@
+div{
+    border: solid 5px red;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+}
+
+header{
+    width: 100%;
+    line-height: 100px;
+    margin-bottom: 5px;
+}
+
+.contents{
+    display: flex;
+}
+
+.flex-contents {
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* contents 左側のレイアウト設定 */
+.contents-left{
+    flex-basis: 20%;
+}
+
+.all_venue{
+    margin: 0px;
+    border: solid 3px blue;
+    box-sizing: border-box;
+}
+
+.venue_info{
+    margin: 0px;
+    border: solid 3px green;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+
+/* contents 右側のレイアウト設定 */
+.contents-right{
+    flex-basis: 90%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-header{
+    flex-basis: 5%;
+    font-size: 20px;
+}
+
+.right-select{
+    flex-basis: 10%;
+    display: flex;
+    font-size: 20px;
+}
+
+.rest_venue{
+    background-color: gray;
+}
+
+.open_venue{
+    background-color: lavenderblush;
+}
+
+.clicked_venue{
+    background-color: lightsalmon;
+}
+
+.right-result{
+    flex-basis: 85%;
+    font-size: 100px;
+}
+
+/* footer レイアウト設定 */
+  footer{
+      line-height: 100px;
+      width: 100%;
+  }
