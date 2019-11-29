@@ -9,8 +9,7 @@
   </head>
   <body>
     <div class="wrapper"> 
-      <header id="Header">DEV monitor</header>  
-
+      <header id="Header"><p>{{message}}</p></header>  
       <div id="Contents" class="contents">
         <div id=ContentsLeft class='flex-contents contents_left'>
           <p class="all_venue"> 会場一覧</p>
@@ -21,8 +20,10 @@
               <p>会場選択</p>
           </div>
           <div id="RightContentsContents" class="flex-right-contents right-select">
-            <script>
-              createVenueSelectList();
+            <script type="text/javascript">
+              let data = "{{message}}";
+              data_list = JSON.parse(data);
+              createVenueSelectList(data_list);
             </script>
           </div>
           <div class="flex-right-contents right-result">main predict contents</div>     

@@ -8,6 +8,8 @@
 const venue = ['桐生', '戸田', '江戸川', '平和島', '多摩川', '浜名湖', '蒲郡', '常滑', '津', '三国', '琵琶湖', '住之江', '尼崎',
     '鳴門', '丸亀', '児島', '宮島', '徳山', '下関', '若松', '芦屋', '福岡', '唐津', '大村'];
 
+const venue_num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+
 /**
  * createContentsMenu()
  * role :左コンテンツの会場情報を作成
@@ -29,7 +31,7 @@ function createContentsMenu() {
  * role :右コンテンツの選択可能会場を表示(開催中の会場を色付き, その他はグレーで表示)
  *
  * */
-function createVenueSelectList() {
+function createVenueSelectList(scraping_venue) {
     let div = document.getElementById("RightContentsContents");
 
     for (let count = 0; count < venue.length; count++) {
@@ -37,15 +39,15 @@ function createVenueSelectList() {
         let text = document.createTextNode(venue[count]);
         button.appendChild(text);
         button.setAttribute('id', 'venueButton' + count);
+        button.setAttribute('class', 'flex-contents rest_venue');
         //後にスクレイピング競技開催中の会場フラグを追加
-        if (String(venue[count]) === '鳴門') {
-            button.setAttribute('class', 'flex-contents open_venue');
-            button.addEventListener('click', onClickVenueButton);
-        }else if (String(venue[count]) === '住之江'){
-            button.setAttribute('class', 'flex-contents open_venue');
-            button.addEventListener('click', onClickVenueButton);
-        } else {
-            button.setAttribute('class', 'flex-contents rest_venue');
+        console.log(scraping_venue);
+        for (let num = 0; num < scraping_venue.length; num++){
+            console.log("venue_num :", venue_num[count],", scraping :",scraping_venue[num]);
+            if (String(venue_num[count]) === String(scraping_venue[num])) {
+                button.setAttribute('class', 'flex-contents open_venue');
+                button.addEventListener('click', onClickVenueButton);
+            } 
         }
         div.appendChild(button);
     }

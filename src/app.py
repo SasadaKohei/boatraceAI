@@ -1,32 +1,26 @@
 # app.py
 from flask import Flask, render_template,request
+from flask_cors import CORS
 import functions.scraping as sc
 
 app = Flask(__name__)
-app.config['JSON_AS_ASCII'] = False
+# app.config['JSON_AS_ASCII'] = False
+CORS(app)  # CORS有効化
 
 @app.route('/')
 def index():
-    return render_template('index.html', message="Hello index")
-
-@app.route('/test', methods=['GET', 'POST'])
-def test():
-    if request.method == 'GET':
-        res = request.args.get('get_value')
-    elif request.method == 'POST':
-        res = request.form['post_value']
-    return res
-
+    value = getVenue()
+    return render_template('index.html', message=value)
 
 @app.route('/scraping', methods=['GET'])
-def scraping():
+def getVenue():
     value = sc.scraping()
     return value
 
-
 @app.route('/main')
 def main():
-    return render_template('main.html')
+    value = getVenue()
+    return render_template('main.html', message=value)
 
 if __name__ == '__main__':
     app.debug = True
